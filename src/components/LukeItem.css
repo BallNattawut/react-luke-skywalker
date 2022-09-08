@@ -1,0 +1,18 @@
+.box-card{
+  width: 25%;
+  padding: 24px 50px;
+  text-align: center;
+}
+
+  .box-card img{
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .box-card-title {
+      padding: 25px 
+  }
+
+  .box-card-title p {
+    font-size: 14px;
+  }
