@@ -7,6 +7,7 @@ import "./App.css";
 
 function App() {
     const [names, setNames] = useState([]);
+    const [heights, setHeight] = useState([]);
     const quotesElements = quotess.map((quotes, index) => {
         return <LukeItem key={index} quotes={quotes} />;
     });
@@ -18,7 +19,8 @@ function App() {
             })
             .then((resJson) => {
                 setNames(resJson.name);
-                console.log(resJson.data);
+                setHeight(resJson.height);
+                //console.log(resJson.data);
             });
     }, []);
 
@@ -29,7 +31,8 @@ function App() {
                 <div className="app-container">
                     <div className="app-profile">
                         <img src="/images/Luke Skywalker.jpeg"></img>
-                        <h1>{names}.</h1>
+                        <h1>{names}</h1>
+                        <p>{heights}</p>
                     </div>
                     <div className="app-card">{quotesElements}</div>
                 </div>
